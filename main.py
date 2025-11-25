@@ -7,7 +7,7 @@ detector = cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=20)
 while True:
     ret, frame = cap.read()
     
-    roi = frame[100:340, 50:340]
+    roi = frame[100:340, 250:360]
     
     mask = detector.apply(roi)
     countors, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
